@@ -1,3 +1,10 @@
+// This script generates square waveforms on multiple pins 
+// simultaneously. I believe the purpose of some of the tones 
+// was to emulate a dialtone or control a touchtone telephone.
+//
+// I doubt it works ...
+
+
 int music_pins[4]={0,1,2,4};
 int num_pins=4;
 //int music_pins[8]={3,4,5,6,7,8,9,10};

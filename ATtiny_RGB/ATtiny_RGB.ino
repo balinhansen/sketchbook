@@ -1,3 +1,14 @@
+/*
+
+// Wrote this Code back in 2013 before I knew how to do 
+// anything with ATtiny so obviously the pins are for Arduino 
+// Uno in spite of the name of this file. 
+
+// I think I remember this code being better than the color 
+// fader I wrote for actual ATtiny85s in 2015
+
+*/
+
 //#include "pins_arduino.h" 
 
 #define redPin       11

@@ -1,3 +1,12 @@
+// This sketch outputs character data to an 74F595 shift 
+// register connected to an LED light bar I made. I have 
+// the PCB drawing ... somewhere.
+
+// The point was that you could wave the light bar and it 
+// spell out the characters ala "Persistence of Vision"
+
+// In this case the characters read "hello world!!!"
+
 int clockpin=4;
 int latchpin=5;
 int datapin=6;

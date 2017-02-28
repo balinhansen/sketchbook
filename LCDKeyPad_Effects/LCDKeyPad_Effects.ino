@@ -1,3 +1,6 @@
+// This looks to be a copy of LCD_Effects ... I have no idea 
+// which is the superior version ...
+
 #include <LiquidCrystal.h>
 #include <LCDKeypad.h>;
 

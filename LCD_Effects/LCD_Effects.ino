@@ -1,3 +1,9 @@
+// Wrote this awful program to count how many hits of 
+// cannabis a person has taken with the added bonus of 
+// telling them how long to hold a lungful of pot smoke.
+
+// This script could use some reworking ...
+
 #include <LiquidCrystal.h>
 #include <LCDKeypad.h>;
 

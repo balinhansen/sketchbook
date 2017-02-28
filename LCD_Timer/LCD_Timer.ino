@@ -1,3 +1,6 @@
+// This might be an earlier version of LCD_Effects, it's probably 
+// garbage ...
+
 #include <LiquidCrystal.h>
 #include <LCDKeypad.h>;
 

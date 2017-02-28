@@ -1,3 +1,6 @@
+// This script apparently is just a loading screen. 
+// ... very low-tech. 
+
 #include <LiquidCrystal.h>
 
 //LiquidCrystal lcd(12, 11, 2, 3, 4, 5);  // Sparkfun 16x2 wtf??!

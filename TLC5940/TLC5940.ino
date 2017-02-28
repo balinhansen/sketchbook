@@ -1,3 +1,8 @@
+// I would guess this was a failed attempt at writing my 
+// own software driver for the Texas Instruments TLC5940 
+// PWM LED driver ... I no longer posess such an IC 
+// so I can't really tinker with this code at the moment.
+
 #include "Color.h";
 
 #define DEBUG      1 // DEBUG counter; if set to 1, will write values back via serial

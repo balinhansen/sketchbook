@@ -1,3 +1,9 @@
+// This sketch utilitized my 74F595 shift-register driven 
+// LED light bar emulate VU Meter light peaks and such. 
+// I don't believe it can actually read an analogue signal 
+// and display the volume, wouldn't that be great?
+
+
 int clockpin=4;
 int latchpin=5;
 int datapin=6;

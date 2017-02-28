@@ -1,3 +1,8 @@
+// I have no idea what the point of this script was apart 
+// from the obvious. It makes a sound on a pin ... continuously.
+
+// Which sound? I'm not quiet sure.
+
 int music_pin=11;
 unsigned long start;
 volatile int msg=0;

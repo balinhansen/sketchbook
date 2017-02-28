@@ -1,3 +1,11 @@
+// This sketch generates square wave tones from a list of 
+// frequencies stored in an array. My guess was that these 
+// pitches were supported to be an 88-key keyboard
+
+// I'd guess this script didn't support polyphony
+
+
+
 double keys[88]={27.50, 29.13, 30.86, 32.70, 34.64, 36.70, 38.89, 
 41.20, 43.65, 46.24, 48.99, 51.91, 55.00, 58.27, 61.73, 65.40, 
 69.29, 73.41, 77.78, 82.40, 87.30, 92.49, 97.99, 103.82, 110.00, 

@@ -1,3 +1,5 @@
+// Really simple servo test I must have written in 2015
+
 int servo_pin=4;
 unsigned long start,pc,last;
 unsigned long s_lo=17,s_hi=s_lo+69;

@@ -1,3 +1,10 @@
+// This was a neat experiment with manual pulse width modulation 
+// the idea was that LEDs would increase in brightness like a 
+// droplet collecting water and the turn off like the droplet 
+// had fallen off. Each pin collects and drops water at it's own 
+// unique rate.
+
+
 unsigned long tick;
 long freq[14];
 long stat[14];

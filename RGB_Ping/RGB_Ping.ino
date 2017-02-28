@@ -1,3 +1,11 @@
+// This is an old script I modified from my brother's code 
+// which turned the output from an Ultrasonic range finder 
+// into colored light to indicated distance.
+
+// I should buy on of those sonar modules so I can tinker with 
+// this code again ...
+
+
 // ---------------------------------------------------------------------------
 // Example NewPing library sketch that does a ping about 20 times per second.
 // ---------------------------------------------------------------------------
