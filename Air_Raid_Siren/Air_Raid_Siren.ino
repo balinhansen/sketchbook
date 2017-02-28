@@ -1,3 +1,5 @@
+// OH GOD IT'S HORRIBLE
+
 int note=0;
 
 void setup(){
