@@ -48,7 +48,7 @@ void LightNote (int midinote){
   color a=gradient[stage];
   color b={};
   
-  if (c>=sizeof(gradient)/4){
+  if (c>=(sizeof(gradient)/12)-1){
     b=gradient[0];
   }else{
     b=gradient[(int(floor(c))+1)];
