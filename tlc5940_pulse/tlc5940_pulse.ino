@@ -7,7 +7,7 @@ void setup()
 }
    int maxed=4095;
    int brightness=0;
-   int d_step=80;
+   int d_step=10;
    int direction=d_step;
    
 void loop()
