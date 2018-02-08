@@ -62,7 +62,7 @@ void loop()
     
   
       Tlc.update();
-  delayMicroseconds(100); 
+  delayMicroseconds(10000); 
 
 }
 
