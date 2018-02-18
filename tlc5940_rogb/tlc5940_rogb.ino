@@ -4,8 +4,8 @@ int pixels=4;
 int channelsperpixel=4;
 int pixel,channel;
 
-int modes=8;
-int mode=8;
+int modes=10;
+int mode=10;
 int color=0;
 int neighbor=0;
 int neighborgrey=0;
@@ -25,7 +25,7 @@ void loop()
 {
   int r,o,g,b;
   int flash,rpixel;
-   
+   int group,greyscale;
   
 
   switch (mode){
@@ -270,6 +270,54 @@ void loop()
   
   
   
+  case 9:
+  
+   group=random(0,floor(NUM_TLCS*16/channelsperpixel));
+   greyscale;
+   
+   for (int pixel = 0; pixel < floor(NUM_TLCS*16 / channelsperpixel); pixel++) {
+     greyscale=random(4095);
+     
+    for (int channel=0;channel < channelsperpixel;channel++){
+     c=pixel*channelsperpixel+channel;
+      
+      if (pixel!=group){
+        greyscale=0;
+      }
+      
+      
+     Tlc.set(c,greyscale);
+      }
+    }
+      Tlc.update();
+  break;
+  
+  
+  
+  case 10:
+  
+    group=count%(int)floor(NUM_TLCS*16/channelsperpixel);
+   //int greyscale;
+   
+   for (int pixel = 0; pixel < floor(NUM_TLCS*16 / channelsperpixel); pixel++) {
+     greyscale=random(4095);
+     
+    for (int channel=0;channel < channelsperpixel;channel++){
+     c=pixel*channelsperpixel+channel;
+      
+      if (pixel!=group){
+        greyscale=0;
+      }
+      
+      
+     Tlc.set(c,greyscale);
+      }
+    }
+      Tlc.update();
+  break;
+  
+  
+  
   }
   
   switch (mode){
@@ -297,6 +345,12 @@ void loop()
  case 8:
       delay(delayspeed);
       break;
+ case 9:
+      delay(delayspeed);
+      break;
+ case 10:
+      delay(delayspeed);
+      break;
   }
   
   
@@ -304,7 +358,7 @@ void loop()
     count=0;
     mode++;
     if (mode > modes){
-    mode=random(1,modes);
+    mode=1;//random(1,modes);
     }
     
   }else{
