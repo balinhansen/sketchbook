@@ -5,6 +5,9 @@
 #define CTRL_REG3 0x22
 #define CTRL_REG4 0x23
 
+int vx=A3;
+int vy=A2;
+int tp=A0;
 
 // Since I won't remember A5 -> SCL, A4 -> SDA, SDO -> HI
 
@@ -18,16 +21,33 @@ void setup(){
   writeI2C(CTRL_REG1, 0x1F);    // Turn on all axes, disable power down
   writeI2C(CTRL_REG3, 0x08);    // Enable control ready signal
   writeI2C(CTRL_REG4, 0x80);    // Set scale (500 deg/sec)
+  pinMode(vx,INPUT);
+  pinMode(vy,INPUT);
+  pinMode(tp,INPUT);
   delay(100);                   // Wait to synchronize 
 }
 
 void loop(){
+  int px,py;
+  int ax,ay;
+  int temp;
+  
+  px=pulseIn(vx,HIGH);
+  py=pulseIn(vy,HIGH);
+  temp=analogRead(tp);
+  
+  ax = ((px / 10) - 500) * 8;
+  ay = ((py / 10) - 500) * 8;
+  
   getGyroValues();              // Get new values
   // In following Dividing by 114 reduces noise
   Serial.print("Who:"); Serial.print(w);
-  Serial.print(" Raw X:");  Serial.print(x / 114);  
-  Serial.print(" Raw Y:"); Serial.print(y / 114);
-  Serial.print(" Raw Z:"); Serial.println(z / 114);
+  Serial.print(" Gyro X:");  Serial.print(x / 114);  
+  Serial.print(" Gyro Y:"); Serial.print(y / 114);
+  Serial.print(" Gyro Z:"); Serial.print(z / 114);
+  Serial.print(" Accel X:"); Serial.print(ax);
+  Serial.print(" Accel Y:"); Serial.print(ay);
+  Serial.print(" Temp:"); Serial.println(temp);
   delay(100);                   // Short delay between reads
 }
 
